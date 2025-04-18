@@ -1,9 +1,9 @@
 # Web_Engineering_Final_Project_Hospital_Management_System
 
 
--- Database: `hms`
+CREATE DATABASE hms
 
--- Admin Table
+
 CREATE TABLE admin (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(255) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE admin (
   updationDate VARCHAR(255)
 );
 
--- Doctors Table
+
 CREATE TABLE doctors (
   id INT AUTO_INCREMENT PRIMARY KEY,
   specilization VARCHAR(255),
@@ -25,7 +25,6 @@ CREATE TABLE doctors (
   updationDate TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Doctor Specialization Table
 CREATE TABLE doctorspecilization (
   id INT AUTO_INCREMENT PRIMARY KEY,
   specilization VARCHAR(255),
@@ -33,7 +32,7 @@ CREATE TABLE doctorspecilization (
   updationDate TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Patients Table
+
 CREATE TABLE tblpatient (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   Docid INT,
@@ -48,7 +47,7 @@ CREATE TABLE tblpatient (
   UpdationDate TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Appointments Table
+
 CREATE TABLE appointment (
   id INT AUTO_INCREMENT PRIMARY KEY,
   doctorSpecialization VARCHAR(255),
@@ -63,7 +62,7 @@ CREATE TABLE appointment (
   updationDate TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Medical History Table
+
 CREATE TABLE tblmedicalhistory (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   PatientID INT,
@@ -75,7 +74,7 @@ CREATE TABLE tblmedicalhistory (
   CreationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Users Table (Patients login)
+
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   fullName VARCHAR(255),
@@ -88,7 +87,6 @@ CREATE TABLE users (
   updationDate TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Contact Messages Table
 CREATE TABLE tblcontactus (
   id INT AUTO_INCREMENT PRIMARY KEY,
   fullname VARCHAR(255),
